@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.summary     = "TTM for Jira Ruby Gem"
   s.description = "Tricentis Test Management for Jira"
   s.license     = "Unlicense"
-  s.required_ruby_version = "3.0"
+  s.required_ruby_version = ">= 3.0.0"
 
   s.add_runtime_dependency 'typhoeus', '~> 1.0', '>= 1.0.1'
   s.add_runtime_dependency 'json', '~> 2.1', '>= 2.1.0'
