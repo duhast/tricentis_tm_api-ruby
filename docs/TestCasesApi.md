@@ -418,6 +418,7 @@ end
 api_instance = TricentisTmApi::TestCasesApi.new
 project_key = 'project_key_example' # String | 
 opts = {
+  strict_order: true, # Boolean | If strict order is true, test-cases will be created according to the given order.
   v1_projects_project_key_test_cases_post_request: TricentisTmApi::V1ProjectsProjectKeyTestCasesPostRequest.new # V1ProjectsProjectKeyTestCasesPostRequest | External API body payload that describes the tests to create.
 }
 
@@ -453,6 +454,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **project_key** | **String** |  |  |
+| **strict_order** | **Boolean** | If strict order is true, test-cases will be created according to the given order. | [optional][default to false] |
 | **v1_projects_project_key_test_cases_post_request** | [**V1ProjectsProjectKeyTestCasesPostRequest**](V1ProjectsProjectKeyTestCasesPostRequest.md) | External API body payload that describes the tests to create. | [optional] |
 
 ### Return type

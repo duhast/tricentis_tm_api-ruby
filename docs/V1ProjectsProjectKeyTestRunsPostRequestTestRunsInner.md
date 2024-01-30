@@ -20,6 +20,7 @@
 | **components** | **Array&lt;String&gt;** |  | [optional] |
 | **labels** | **Array&lt;String&gt;** |  | [optional] |
 | **cycle_name** | **String** |  | [optional] |
+| **folder_path** | **String** |  | [optional] |
 | **steps** | [**Array&lt;V1ProjectsProjectKeyTestRunsPostRequestTestRunsInnerStepsInner&gt;**](V1ProjectsProjectKeyTestRunsPostRequestTestRunsInnerStepsInner.md) |  | [optional] |
 | **fields** | [**Array&lt;V1ProjectsProjectKeyCyclesPostRequestInnerFieldsInner&gt;**](V1ProjectsProjectKeyCyclesPostRequestInnerFieldsInner.md) |  | [optional] |
 
@@ -45,6 +46,7 @@ instance = TricentisTmApi::V1ProjectsProjectKeyTestRunsPostRequestTestRunsInner.
   components: null,
   labels: null,
   cycle_name: null,
+  folder_path: null,
   steps: null,
   fields: null
 )

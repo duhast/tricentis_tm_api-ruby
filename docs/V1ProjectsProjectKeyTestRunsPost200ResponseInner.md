@@ -4,6 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **test_case_key** | **String** |  |  |
 | **precondition** | **String** |  | [optional] |
 | **status** | **String** |  |  |
 | **name** | **String** |  | [optional] |
@@ -19,10 +20,10 @@
 | **components** | **Array&lt;String&gt;** |  | [optional] |
 | **labels** | **Array&lt;String&gt;** |  | [optional] |
 | **cycle_name** | **String** |  | [optional] |
+| **folder_path** | **String** |  | [optional] |
 | **steps** | [**Array&lt;V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner&gt;**](V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner.md) |  | [optional] |
 | **fields** | [**Array&lt;V1ProjectsProjectKeyCyclesPostRequestInnerFieldsInner&gt;**](V1ProjectsProjectKeyCyclesPostRequestInnerFieldsInner.md) |  | [optional] |
 | **id** | **String** |  | [optional] |
-| **test_case_key** | **String** |  | [optional] |
 | **key** | **String** |  | [optional] |
 | **created** | **Time** |  | [optional] |
 | **updated** | **Time** |  | [optional] |
@@ -36,6 +37,7 @@
 require 'tricentis_tm_api'
 
 instance = TricentisTmApi::V1ProjectsProjectKeyTestRunsPost200ResponseInner.new(
+  test_case_key: null,
   precondition: null,
   status: null,
   name: null,
@@ -51,10 +53,10 @@ instance = TricentisTmApi::V1ProjectsProjectKeyTestRunsPost200ResponseInner.new(
   components: null,
   labels: null,
   cycle_name: null,
+  folder_path: null,
   steps: null,
   fields: null,
   id: null,
-  test_case_key: null,
   key: null,
   created: null,
   updated: null,

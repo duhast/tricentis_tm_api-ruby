@@ -88,13 +88,18 @@ Class | Method | HTTP request | Description
 *TricentisTmApi::AttachmentsApi* | [**v1_projects_project_key_test_runs_attachments_id_put**](docs/AttachmentsApi.md#v1_projects_project_key_test_runs_attachments_id_put) | **PUT** /v1/projects/{project-key}/test-runs/attachments/{id} | Query if attachment is uploaded to storage.
 *TricentisTmApi::AttachmentsApi* | [**v1_projects_project_key_test_runs_test_run_key_attachments_post**](docs/AttachmentsApi.md#v1_projects_project_key_test_runs_test_run_key_attachments_post) | **POST** /v1/projects/{project-key}/test-runs/{test-run-key}/attachments | Upload attachment to a test run.
 *TricentisTmApi::AttachmentsApi* | [**v1_projects_project_key_test_runs_test_run_key_steps_step_number_attachments_post**](docs/AttachmentsApi.md#v1_projects_project_key_test_runs_test_run_key_steps_step_number_attachments_post) | **POST** /v1/projects/{project-key}/test-runs/{test-run-key}/steps/{step-number}/attachments | Upload attachment to a test run step.
+*TricentisTmApi::CyclesApi* | [**v1_projects_project_key_cycles_cycle_id_put**](docs/CyclesApi.md#v1_projects_project_key_cycles_cycle_id_put) | **PUT** /v1/projects/{project-key}/cycles/{cycleId} | Update cycle.
 *TricentisTmApi::CyclesApi* | [**v1_projects_project_key_cycles_post**](docs/CyclesApi.md#v1_projects_project_key_cycles_post) | **POST** /v1/projects/{project-key}/cycles | Create cycle(s).
+*TricentisTmApi::CyclesApi* | [**v1_projects_project_key_cycles_search_get**](docs/CyclesApi.md#v1_projects_project_key_cycles_search_get) | **GET** /v1/projects/{project-key}/cycles/search | Get cycles.
 *TricentisTmApi::DefectsApi* | [**v1_projects_project_key_test_runs_test_run_key_defects_link_post**](docs/DefectsApi.md#v1_projects_project_key_test_runs_test_run_key_defects_link_post) | **POST** /v1/projects/{project-key}/test-runs/{test-run-key}/defects/link | Link Defects to test run.
 *TricentisTmApi::DefectsApi* | [**v1_projects_project_key_test_runs_test_run_key_defects_post**](docs/DefectsApi.md#v1_projects_project_key_test_runs_test_run_key_defects_post) | **POST** /v1/projects/{project-key}/test-runs/{test-run-key}/defects | Create defects and link to test run.
+*TricentisTmApi::FoldersApi* | [**v1_projects_project_key_folders_folder_id_put**](docs/FoldersApi.md#v1_projects_project_key_folders_folder_id_put) | **PUT** /v1/projects/{project-key}/folders/{folderId} | Update folder.
+*TricentisTmApi::FoldersApi* | [**v1_projects_project_key_folders_get**](docs/FoldersApi.md#v1_projects_project_key_folders_get) | **GET** /v1/projects/{project-key}/folders | Get folder(s).
 *TricentisTmApi::FoldersApi* | [**v1_projects_project_key_folders_post**](docs/FoldersApi.md#v1_projects_project_key_folders_post) | **POST** /v1/projects/{project-key}/folders | Create folder(s).
 *TricentisTmApi::ProjectsApi* | [**v1_projects_get**](docs/ProjectsApi.md#v1_projects_get) | **GET** /v1/projects | Get Jira project(s).
 *TricentisTmApi::RequirementsApi* | [**v1_projects_project_key_test_cases_key_requirement_link_post**](docs/RequirementsApi.md#v1_projects_project_key_test_cases_key_requirement_link_post) | **POST** /v1/projects/{project-key}/test-cases/{key}/requirement/link | Link Requirements to test case.
 *TricentisTmApi::RequirementsApi* | [**v1_projects_project_key_test_cases_key_requirements_post**](docs/RequirementsApi.md#v1_projects_project_key_test_cases_key_requirements_post) | **POST** /v1/projects/{project-key}/test-cases/{key}/requirements | Create Requirements and link to test case.
+*TricentisTmApi::RequirementsApi* | [**v1_projects_project_key_test_cases_requirements_post**](docs/RequirementsApi.md#v1_projects_project_key_test_cases_requirements_post) | **POST** /v1/projects/{project-key}/test-cases/requirements | Create Requirements.
 *TricentisTmApi::StatusApi* | [**v1_api_key_is_alive_head**](docs/StatusApi.md#v1_api_key_is_alive_head) | **HEAD** /v1/api-key/is-alive | Validate if api key is still valid.
 *TricentisTmApi::TestCasesApi* | [**v1_projects_project_key_jobs_job_id_get**](docs/TestCasesApi.md#v1_projects_project_key_jobs_job_id_get) | **GET** /v1/projects/{project-key}/jobs/{job-id} | Query job status.
 *TricentisTmApi::TestCasesApi* | [**v1_projects_project_key_test_cases_get**](docs/TestCasesApi.md#v1_projects_project_key_test_cases_get) | **GET** /v1/projects/{project-key}/test-cases | Read test case(s).
@@ -116,13 +121,15 @@ Class | Method | HTTP request | Description
 
  - [TricentisTmApi::V1ProjectsGet200ResponseInner](docs/V1ProjectsGet200ResponseInner.md)
  - [TricentisTmApi::V1ProjectsGet200ResponseInnerAvatarUrls](docs/V1ProjectsGet200ResponseInnerAvatarUrls.md)
+ - [TricentisTmApi::V1ProjectsProjectKeyCyclesCycleIdPutRequest](docs/V1ProjectsProjectKeyCyclesCycleIdPutRequest.md)
  - [TricentisTmApi::V1ProjectsProjectKeyCyclesPost200ResponseInner](docs/V1ProjectsProjectKeyCyclesPost200ResponseInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyCyclesPost200ResponseInnerVersion](docs/V1ProjectsProjectKeyCyclesPost200ResponseInnerVersion.md)
  - [TricentisTmApi::V1ProjectsProjectKeyCyclesPostRequestInner](docs/V1ProjectsProjectKeyCyclesPostRequestInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyCyclesPostRequestInnerFieldsInner](docs/V1ProjectsProjectKeyCyclesPostRequestInnerFieldsInner.md)
- - [TricentisTmApi::V1ProjectsProjectKeyFoldersPost200Response](docs/V1ProjectsProjectKeyFoldersPost200Response.md)
- - [TricentisTmApi::V1ProjectsProjectKeyFoldersPost200ResponseItemsInner](docs/V1ProjectsProjectKeyFoldersPost200ResponseItemsInner.md)
- - [TricentisTmApi::V1ProjectsProjectKeyFoldersPost400Response](docs/V1ProjectsProjectKeyFoldersPost400Response.md)
+ - [TricentisTmApi::V1ProjectsProjectKeyFoldersFolderIdPutRequest](docs/V1ProjectsProjectKeyFoldersFolderIdPutRequest.md)
+ - [TricentisTmApi::V1ProjectsProjectKeyFoldersGet200Response](docs/V1ProjectsProjectKeyFoldersGet200Response.md)
+ - [TricentisTmApi::V1ProjectsProjectKeyFoldersGet200ResponseItemsInner](docs/V1ProjectsProjectKeyFoldersGet200ResponseItemsInner.md)
+ - [TricentisTmApi::V1ProjectsProjectKeyFoldersGet400Response](docs/V1ProjectsProjectKeyFoldersGet400Response.md)
  - [TricentisTmApi::V1ProjectsProjectKeyFoldersPostRequestInner](docs/V1ProjectsProjectKeyFoldersPostRequestInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyImportExecutionJunitPostRequest](docs/V1ProjectsProjectKeyImportExecutionJunitPostRequest.md)
  - [TricentisTmApi::V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInner](docs/V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInner.md)
@@ -143,13 +150,13 @@ Class | Method | HTTP request | Description
  - [TricentisTmApi::V1ProjectsProjectKeyTestCasesKeyPutRequestTtmFields](docs/V1ProjectsProjectKeyTestCasesKeyPutRequestTtmFields.md)
  - [TricentisTmApi::V1ProjectsProjectKeyTestCasesKeyPutRequestTtmFieldsStepsInner](docs/V1ProjectsProjectKeyTestCasesKeyPutRequestTtmFieldsStepsInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyTestCasesKeyRequirementLinkPostRequestInner](docs/V1ProjectsProjectKeyTestCasesKeyRequirementLinkPostRequestInner.md)
- - [TricentisTmApi::V1ProjectsProjectKeyTestCasesKeyRequirementsPost200ResponseInner](docs/V1ProjectsProjectKeyTestCasesKeyRequirementsPost200ResponseInner.md)
- - [TricentisTmApi::V1ProjectsProjectKeyTestCasesKeyRequirementsPostRequestInner](docs/V1ProjectsProjectKeyTestCasesKeyRequirementsPostRequestInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyTestCasesPostRequest](docs/V1ProjectsProjectKeyTestCasesPostRequest.md)
  - [TricentisTmApi::V1ProjectsProjectKeyTestCasesPostRequestTestsInner](docs/V1ProjectsProjectKeyTestCasesPostRequestTestsInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyTestCasesPostRequestTestsInnerAutomation](docs/V1ProjectsProjectKeyTestCasesPostRequestTestsInnerAutomation.md)
  - [TricentisTmApi::V1ProjectsProjectKeyTestCasesPostRequestTestsInnerTtmFields](docs/V1ProjectsProjectKeyTestCasesPostRequestTestsInnerTtmFields.md)
  - [TricentisTmApi::V1ProjectsProjectKeyTestCasesPostRequestTestsInnerTtmFieldsStepsInner](docs/V1ProjectsProjectKeyTestCasesPostRequestTestsInnerTtmFieldsStepsInner.md)
+ - [TricentisTmApi::V1ProjectsProjectKeyTestCasesRequirementsPost200ResponseInner](docs/V1ProjectsProjectKeyTestCasesRequirementsPost200ResponseInner.md)
+ - [TricentisTmApi::V1ProjectsProjectKeyTestCasesRequirementsPostRequestInner](docs/V1ProjectsProjectKeyTestCasesRequirementsPostRequestInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyTestRunsPost200ResponseInner](docs/V1ProjectsProjectKeyTestRunsPost200ResponseInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner](docs/V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyTestRunsPostRequest](docs/V1ProjectsProjectKeyTestRunsPostRequest.md)

@@ -113,7 +113,7 @@ test_run_key = 'test_run_key_example' # String | Test Run Key.
 project_key = 'project_key_example' # String | 
 opts = {
   step_index: 56, # Integer | stepIndex .
-  v1_projects_project_key_test_cases_key_requirements_post_request_inner: [TricentisTmApi::V1ProjectsProjectKeyTestCasesKeyRequirementsPostRequestInner.new] # Array<V1ProjectsProjectKeyTestCasesKeyRequirementsPostRequestInner> | defects to create.
+  v1_projects_project_key_test_cases_requirements_post_request_inner: [TricentisTmApi::V1ProjectsProjectKeyTestCasesRequirementsPostRequestInner.new] # Array<V1ProjectsProjectKeyTestCasesRequirementsPostRequestInner> | defects to create.
 }
 
 begin
@@ -150,7 +150,7 @@ end
 | **test_run_key** | **String** | Test Run Key. |  |
 | **project_key** | **String** |  |  |
 | **step_index** | **Integer** | stepIndex . | [optional] |
-| **v1_projects_project_key_test_cases_key_requirements_post_request_inner** | [**Array&lt;V1ProjectsProjectKeyTestCasesKeyRequirementsPostRequestInner&gt;**](V1ProjectsProjectKeyTestCasesKeyRequirementsPostRequestInner.md) | defects to create. | [optional] |
+| **v1_projects_project_key_test_cases_requirements_post_request_inner** | [**Array&lt;V1ProjectsProjectKeyTestCasesRequirementsPostRequestInner&gt;**](V1ProjectsProjectKeyTestCasesRequirementsPostRequestInner.md) | defects to create. | [optional] |
 
 ### Return type
 

@@ -12,6 +12,7 @@
 | **priority** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
 | **cycle_id** | **String** |  | [optional] |
+| **folder_path** | **String** |  | [optional] |
 | **components** | **Array&lt;String&gt;** |  | [optional] |
 | **labels** | **Array&lt;String&gt;** |  | [optional] |
 | **fields** | [**Array&lt;V1ProjectsProjectKeyCyclesPostRequestInnerFieldsInner&gt;**](V1ProjectsProjectKeyCyclesPostRequestInnerFieldsInner.md) |  | [optional] |
@@ -31,6 +32,7 @@ instance = TricentisTmApi::V1ProjectsProjectKeyTestRunsTestRunKeyPutRequest.new(
   priority: null,
   status: null,
   cycle_id: null,
+  folder_path: null,
   components: null,
   labels: null,
   fields: null,
