@@ -19,6 +19,73 @@ module TricentisTmApi
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # Get attachment link.
+    # @param attachment_id [String] The attachment Id.
+    # @param project_key [String] 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def v1_projects_project_key_test_runs_attachments_attachment_id_get(attachment_id, project_key, opts = {})
+      v1_projects_project_key_test_runs_attachments_attachment_id_get_with_http_info(attachment_id, project_key, opts)
+      nil
+    end
+
+    # Get attachment link.
+    # @param attachment_id [String] The attachment Id.
+    # @param project_key [String] 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
+    def v1_projects_project_key_test_runs_attachments_attachment_id_get_with_http_info(attachment_id, project_key, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: AttachmentsApi.v1_projects_project_key_test_runs_attachments_attachment_id_get ...'
+      end
+      # verify the required parameter 'attachment_id' is set
+      if @api_client.config.client_side_validation && attachment_id.nil?
+        fail ArgumentError, "Missing the required parameter 'attachment_id' when calling AttachmentsApi.v1_projects_project_key_test_runs_attachments_attachment_id_get"
+      end
+      # verify the required parameter 'project_key' is set
+      if @api_client.config.client_side_validation && project_key.nil?
+        fail ArgumentError, "Missing the required parameter 'project_key' when calling AttachmentsApi.v1_projects_project_key_test_runs_attachments_attachment_id_get"
+      end
+      # resource path
+      local_var_path = '/v1/projects/{project-key}/test-runs/attachments/{attachmentId}'.sub('{' + 'attachmentId' + '}', CGI.escape(attachment_id.to_s)).sub('{' + 'project-key' + '}', CGI.escape(project_key.to_s))
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type]
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['api_key']
+
+      new_options = opts.merge(
+        :operation => :"AttachmentsApi.v1_projects_project_key_test_runs_attachments_attachment_id_get",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AttachmentsApi#v1_projects_project_key_test_runs_attachments_attachment_id_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Query if attachment is uploaded to storage.
     # ## Query if the attachment file was successfully uploaded to storage.                Use this to confirm the following:  * Upload information was received from **POST** v1/projects/{project-key}/test-runs/{test-run-key}/attachments  * The file successfully uploaded to storage as binary data.
     # @param id [String] Attachment Id.
@@ -84,6 +151,79 @@ module TricentisTmApi
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: AttachmentsApi#v1_projects_project_key_test_runs_attachments_id_put\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Get attachment of a test run.
+    # @param test_run_key [String] Test Run Key.
+    # @param project_key [String] 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :offset Numeric value that determines that the result list will start from result #N (zero based)
+    # @option opts [Integer] :limit Numeric value that determines that maximum N results will be returned
+    # @return [nil]
+    def v1_projects_project_key_test_runs_test_run_key_attachments_get(test_run_key, project_key, opts = {})
+      v1_projects_project_key_test_runs_test_run_key_attachments_get_with_http_info(test_run_key, project_key, opts)
+      nil
+    end
+
+    # Get attachment of a test run.
+    # @param test_run_key [String] Test Run Key.
+    # @param project_key [String] 
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :offset Numeric value that determines that the result list will start from result #N (zero based)
+    # @option opts [Integer] :limit Numeric value that determines that maximum N results will be returned
+    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
+    def v1_projects_project_key_test_runs_test_run_key_attachments_get_with_http_info(test_run_key, project_key, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: AttachmentsApi.v1_projects_project_key_test_runs_test_run_key_attachments_get ...'
+      end
+      # verify the required parameter 'test_run_key' is set
+      if @api_client.config.client_side_validation && test_run_key.nil?
+        fail ArgumentError, "Missing the required parameter 'test_run_key' when calling AttachmentsApi.v1_projects_project_key_test_runs_test_run_key_attachments_get"
+      end
+      # verify the required parameter 'project_key' is set
+      if @api_client.config.client_side_validation && project_key.nil?
+        fail ArgumentError, "Missing the required parameter 'project_key' when calling AttachmentsApi.v1_projects_project_key_test_runs_test_run_key_attachments_get"
+      end
+      # resource path
+      local_var_path = '/v1/projects/{project-key}/test-runs/{test-run-key}/attachments'.sub('{' + 'test-run-key' + '}', CGI.escape(test_run_key.to_s)).sub('{' + 'project-key' + '}', CGI.escape(project_key.to_s))
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'offset'] = opts[:'offset'] if !opts[:'offset'].nil?
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type]
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || ['api_key']
+
+      new_options = opts.merge(
+        :operation => :"AttachmentsApi.v1_projects_project_key_test_runs_test_run_key_attachments_get",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: AttachmentsApi#v1_projects_project_key_test_runs_test_run_key_attachments_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

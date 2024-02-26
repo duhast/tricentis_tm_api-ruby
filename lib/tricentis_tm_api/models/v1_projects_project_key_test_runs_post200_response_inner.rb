@@ -15,6 +15,22 @@ require 'time'
 
 module TricentisTmApi
   class V1ProjectsProjectKeyTestRunsPost200ResponseInner
+    attr_accessor :id
+
+    attr_accessor :key
+
+    attr_accessor :created
+
+    attr_accessor :updated
+
+    attr_accessor :created_by
+
+    attr_accessor :updated_by
+
+    attr_accessor :cycle
+
+    attr_accessor :steps
+
     attr_accessor :test_case_key
 
     attr_accessor :precondition
@@ -49,23 +65,7 @@ module TricentisTmApi
 
     attr_accessor :folder_path
 
-    attr_accessor :steps
-
     attr_accessor :fields
-
-    attr_accessor :id
-
-    attr_accessor :key
-
-    attr_accessor :created
-
-    attr_accessor :updated
-
-    attr_accessor :created_by
-
-    attr_accessor :updated_by
-
-    attr_accessor :cycle
 
     class EnumAttributeValidator
       attr_reader :datatype
@@ -92,6 +92,14 @@ module TricentisTmApi
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'id' => :'id',
+        :'key' => :'key',
+        :'created' => :'created',
+        :'updated' => :'updated',
+        :'created_by' => :'createdBy',
+        :'updated_by' => :'updatedBy',
+        :'cycle' => :'cycle',
+        :'steps' => :'steps',
         :'test_case_key' => :'testCaseKey',
         :'precondition' => :'precondition',
         :'status' => :'status',
@@ -109,15 +117,7 @@ module TricentisTmApi
         :'labels' => :'labels',
         :'cycle_name' => :'cycleName',
         :'folder_path' => :'folderPath',
-        :'steps' => :'steps',
-        :'fields' => :'fields',
-        :'id' => :'id',
-        :'key' => :'key',
-        :'created' => :'created',
-        :'updated' => :'updated',
-        :'created_by' => :'createdBy',
-        :'updated_by' => :'updatedBy',
-        :'cycle' => :'cycle'
+        :'fields' => :'fields'
       }
     end
 
@@ -129,6 +129,14 @@ module TricentisTmApi
     # Attribute type mapping.
     def self.openapi_types
       {
+        :'id' => :'String',
+        :'key' => :'String',
+        :'created' => :'Time',
+        :'updated' => :'Time',
+        :'created_by' => :'String',
+        :'updated_by' => :'String',
+        :'cycle' => :'V1ProjectsProjectKeyCyclesPost200ResponseInner',
+        :'steps' => :'Array<V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner>',
         :'test_case_key' => :'String',
         :'precondition' => :'String',
         :'status' => :'String',
@@ -146,21 +154,19 @@ module TricentisTmApi
         :'labels' => :'Array<String>',
         :'cycle_name' => :'String',
         :'folder_path' => :'String',
-        :'steps' => :'Array<V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner>',
-        :'fields' => :'Array<V1ProjectsProjectKeyCyclesPostRequestInnerFieldsInner>',
-        :'id' => :'String',
-        :'key' => :'String',
-        :'created' => :'Time',
-        :'updated' => :'Time',
-        :'created_by' => :'String',
-        :'updated_by' => :'String',
-        :'cycle' => :'V1ProjectsProjectKeyCyclesPost200ResponseInner'
+        :'fields' => :'Array<V1ProjectsProjectKeyCyclesPostRequestInnerFieldsInner>'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'key',
+        :'created',
+        :'updated',
+        :'created_by',
+        :'updated_by',
+        :'steps',
         :'precondition',
         :'name',
         :'description',
@@ -174,13 +180,7 @@ module TricentisTmApi
         :'labels',
         :'cycle_name',
         :'folder_path',
-        :'steps',
-        :'fields',
-        :'key',
-        :'created',
-        :'updated',
-        :'created_by',
-        :'updated_by',
+        :'fields'
       ])
     end
 
@@ -198,6 +198,40 @@ module TricentisTmApi
         end
         h[k.to_sym] = v
       }
+
+      if attributes.key?(:'id')
+        self.id = attributes[:'id']
+      end
+
+      if attributes.key?(:'key')
+        self.key = attributes[:'key']
+      end
+
+      if attributes.key?(:'created')
+        self.created = attributes[:'created']
+      end
+
+      if attributes.key?(:'updated')
+        self.updated = attributes[:'updated']
+      end
+
+      if attributes.key?(:'created_by')
+        self.created_by = attributes[:'created_by']
+      end
+
+      if attributes.key?(:'updated_by')
+        self.updated_by = attributes[:'updated_by']
+      end
+
+      if attributes.key?(:'cycle')
+        self.cycle = attributes[:'cycle']
+      end
+
+      if attributes.key?(:'steps')
+        if (value = attributes[:'steps']).is_a?(Array)
+          self.steps = value
+        end
+      end
 
       if attributes.key?(:'test_case_key')
         self.test_case_key = attributes[:'test_case_key']
@@ -277,44 +311,10 @@ module TricentisTmApi
         self.folder_path = attributes[:'folder_path']
       end
 
-      if attributes.key?(:'steps')
-        if (value = attributes[:'steps']).is_a?(Array)
-          self.steps = value
-        end
-      end
-
       if attributes.key?(:'fields')
         if (value = attributes[:'fields']).is_a?(Array)
           self.fields = value
         end
-      end
-
-      if attributes.key?(:'id')
-        self.id = attributes[:'id']
-      end
-
-      if attributes.key?(:'key')
-        self.key = attributes[:'key']
-      end
-
-      if attributes.key?(:'created')
-        self.created = attributes[:'created']
-      end
-
-      if attributes.key?(:'updated')
-        self.updated = attributes[:'updated']
-      end
-
-      if attributes.key?(:'created_by')
-        self.created_by = attributes[:'created_by']
-      end
-
-      if attributes.key?(:'updated_by')
-        self.updated_by = attributes[:'updated_by']
-      end
-
-      if attributes.key?(:'cycle')
-        self.cycle = attributes[:'cycle']
       end
     end
 
@@ -403,6 +403,14 @@ module TricentisTmApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          id == o.id &&
+          key == o.key &&
+          created == o.created &&
+          updated == o.updated &&
+          created_by == o.created_by &&
+          updated_by == o.updated_by &&
+          cycle == o.cycle &&
+          steps == o.steps &&
           test_case_key == o.test_case_key &&
           precondition == o.precondition &&
           status == o.status &&
@@ -420,15 +428,7 @@ module TricentisTmApi
           labels == o.labels &&
           cycle_name == o.cycle_name &&
           folder_path == o.folder_path &&
-          steps == o.steps &&
-          fields == o.fields &&
-          id == o.id &&
-          key == o.key &&
-          created == o.created &&
-          updated == o.updated &&
-          created_by == o.created_by &&
-          updated_by == o.updated_by &&
-          cycle == o.cycle
+          fields == o.fields
     end
 
     # @see the `==` method
@@ -440,7 +440,7 @@ module TricentisTmApi
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [test_case_key, precondition, status, name, description, priority, test_category, test_type, assignee, executed_by, planned_start_date, planned_end_date, automation, components, labels, cycle_name, folder_path, steps, fields, id, key, created, updated, created_by, updated_by, cycle].hash
+      [id, key, created, updated, created_by, updated_by, cycle, steps, test_case_key, precondition, status, name, description, priority, test_category, test_type, assignee, executed_by, planned_start_date, planned_end_date, automation, components, labels, cycle_name, folder_path, fields].hash
     end
 
     # Builds the object from hash

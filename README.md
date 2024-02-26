@@ -67,14 +67,14 @@ TricentisTmApi.configure do |config|
 end
 
 api_instance = TricentisTmApi::AttachmentsApi.new
-id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | Attachment Id.
+attachment_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # String | The attachment Id.
 project_key = 'project_key_example' # String | 
 
 begin
-  #Query if attachment is uploaded to storage.
-  api_instance.v1_projects_project_key_test_runs_attachments_id_put(id, project_key)
+  #Get attachment link.
+  api_instance.v1_projects_project_key_test_runs_attachments_attachment_id_get(attachment_id, project_key)
 rescue TricentisTmApi::ApiError => e
-  puts "Exception when calling AttachmentsApi->v1_projects_project_key_test_runs_attachments_id_put: #{e}"
+  puts "Exception when calling AttachmentsApi->v1_projects_project_key_test_runs_attachments_attachment_id_get: #{e}"
 end
 
 ```
@@ -85,7 +85,9 @@ All URIs are relative to *https://api.ttm4j.tricentis.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*TricentisTmApi::AttachmentsApi* | [**v1_projects_project_key_test_runs_attachments_attachment_id_get**](docs/AttachmentsApi.md#v1_projects_project_key_test_runs_attachments_attachment_id_get) | **GET** /v1/projects/{project-key}/test-runs/attachments/{attachmentId} | Get attachment link.
 *TricentisTmApi::AttachmentsApi* | [**v1_projects_project_key_test_runs_attachments_id_put**](docs/AttachmentsApi.md#v1_projects_project_key_test_runs_attachments_id_put) | **PUT** /v1/projects/{project-key}/test-runs/attachments/{id} | Query if attachment is uploaded to storage.
+*TricentisTmApi::AttachmentsApi* | [**v1_projects_project_key_test_runs_test_run_key_attachments_get**](docs/AttachmentsApi.md#v1_projects_project_key_test_runs_test_run_key_attachments_get) | **GET** /v1/projects/{project-key}/test-runs/{test-run-key}/attachments | Get attachment of a test run.
 *TricentisTmApi::AttachmentsApi* | [**v1_projects_project_key_test_runs_test_run_key_attachments_post**](docs/AttachmentsApi.md#v1_projects_project_key_test_runs_test_run_key_attachments_post) | **POST** /v1/projects/{project-key}/test-runs/{test-run-key}/attachments | Upload attachment to a test run.
 *TricentisTmApi::AttachmentsApi* | [**v1_projects_project_key_test_runs_test_run_key_steps_step_number_attachments_post**](docs/AttachmentsApi.md#v1_projects_project_key_test_runs_test_run_key_steps_step_number_attachments_post) | **POST** /v1/projects/{project-key}/test-runs/{test-run-key}/steps/{step-number}/attachments | Upload attachment to a test run step.
 *TricentisTmApi::CyclesApi* | [**v1_projects_project_key_cycles_cycle_id_put**](docs/CyclesApi.md#v1_projects_project_key_cycles_cycle_id_put) | **PUT** /v1/projects/{project-key}/cycles/{cycleId} | Update cycle.
@@ -135,6 +137,7 @@ Class | Method | HTTP request | Description
  - [TricentisTmApi::V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInner](docs/V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInnerTestcaseInner](docs/V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInnerTestcaseInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInnerTestcaseInnerFailure](docs/V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInnerTestcaseInnerFailure.md)
+ - [TricentisTmApi::V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInnerTestsuitesInner](docs/V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInnerTestsuitesInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyJobsJobIdGet200Response](docs/V1ProjectsProjectKeyJobsJobIdGet200Response.md)
  - [TricentisTmApi::V1ProjectsProjectKeyJobsJobIdGet200ResponseErrorsInner](docs/V1ProjectsProjectKeyJobsJobIdGet200ResponseErrorsInner.md)
  - [TricentisTmApi::V1ProjectsProjectKeyJobsJobIdGet200ResponseErrorsInnerElementDataErrors](docs/V1ProjectsProjectKeyJobsJobIdGet200ResponseErrorsInnerElementDataErrors.md)

@@ -29,6 +29,8 @@ module TricentisTmApi
 
     attr_accessor :failureevaluating
 
+    attr_accessor :testsuites
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -38,7 +40,8 @@ module TricentisTmApi
         :'failure' => :'failure',
         :'timestamp' => :'timestamp',
         :'skipped' => :'skipped',
-        :'failureevaluating' => :'failureevaluating'
+        :'failureevaluating' => :'failureevaluating',
+        :'testsuites' => :'testsuites'
       }
     end
 
@@ -56,7 +59,8 @@ module TricentisTmApi
         :'failure' => :'Integer',
         :'timestamp' => :'Time',
         :'skipped' => :'Integer',
-        :'failureevaluating' => :'Integer'
+        :'failureevaluating' => :'Integer',
+        :'testsuites' => :'Array<V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInnerTestsuitesInner>'
       }
     end
 
@@ -65,6 +69,7 @@ module TricentisTmApi
       Set.new([
         :'testcase',
         :'name',
+        :'testsuites'
       ])
     end
 
@@ -112,6 +117,12 @@ module TricentisTmApi
       if attributes.key?(:'failureevaluating')
         self.failureevaluating = attributes[:'failureevaluating']
       end
+
+      if attributes.key?(:'testsuites')
+        if (value = attributes[:'testsuites']).is_a?(Array)
+          self.testsuites = value
+        end
+      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
@@ -140,7 +151,8 @@ module TricentisTmApi
           failure == o.failure &&
           timestamp == o.timestamp &&
           skipped == o.skipped &&
-          failureevaluating == o.failureevaluating
+          failureevaluating == o.failureevaluating &&
+          testsuites == o.testsuites
     end
 
     # @see the `==` method
@@ -152,7 +164,7 @@ module TricentisTmApi
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [testcase, name, tests, failure, timestamp, skipped, failureevaluating].hash
+      [testcase, name, tests, failure, timestamp, skipped, failureevaluating, testsuites].hash
     end
 
     # Builds the object from hash

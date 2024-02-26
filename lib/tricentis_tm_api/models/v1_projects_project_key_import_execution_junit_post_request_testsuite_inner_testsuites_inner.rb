@@ -14,31 +14,31 @@ require 'date'
 require 'time'
 
 module TricentisTmApi
-  class V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner
-    attr_accessor :index
+  class V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInnerTestsuitesInner
+    attr_accessor :testcase
 
-    attr_accessor :status
+    attr_accessor :name
 
-    attr_accessor :actual_result
+    attr_accessor :tests
 
-    attr_accessor :data
+    attr_accessor :failure
 
-    attr_accessor :comment
+    attr_accessor :timestamp
 
-    attr_accessor :description
+    attr_accessor :skipped
 
-    attr_accessor :expected_result
+    attr_accessor :failureevaluating
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'index' => :'index',
-        :'status' => :'status',
-        :'actual_result' => :'actualResult',
-        :'data' => :'data',
-        :'comment' => :'comment',
-        :'description' => :'description',
-        :'expected_result' => :'expectedResult'
+        :'testcase' => :'testcase',
+        :'name' => :'name',
+        :'tests' => :'tests',
+        :'failure' => :'failure',
+        :'timestamp' => :'timestamp',
+        :'skipped' => :'skipped',
+        :'failureevaluating' => :'failureevaluating'
       }
     end
 
@@ -50,26 +50,21 @@ module TricentisTmApi
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'index' => :'Integer',
-        :'status' => :'String',
-        :'actual_result' => :'String',
-        :'data' => :'String',
-        :'comment' => :'String',
-        :'description' => :'String',
-        :'expected_result' => :'String'
+        :'testcase' => :'Array<V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInnerTestcaseInner>',
+        :'name' => :'String',
+        :'tests' => :'Integer',
+        :'failure' => :'Integer',
+        :'timestamp' => :'Time',
+        :'skipped' => :'Integer',
+        :'failureevaluating' => :'Integer'
       }
     end
 
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
-        :'index',
-        :'status',
-        :'actual_result',
-        :'data',
-        :'comment',
-        :'description',
-        :'expected_result'
+        :'testcase',
+        :'name',
       ])
     end
 
@@ -77,43 +72,45 @@ module TricentisTmApi
     # @param [Hash] attributes Model attributes in the form of hash
     def initialize(attributes = {})
       if (!attributes.is_a?(Hash))
-        fail ArgumentError, "The input argument (attributes) must be a hash in `TricentisTmApi::V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner` initialize method"
+        fail ArgumentError, "The input argument (attributes) must be a hash in `TricentisTmApi::V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInnerTestsuitesInner` initialize method"
       end
 
       # check to see if the attribute exists and convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h|
         if (!self.class.attribute_map.key?(k.to_sym))
-          fail ArgumentError, "`#{k}` is not a valid attribute in `TricentisTmApi::V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
+          fail ArgumentError, "`#{k}` is not a valid attribute in `TricentisTmApi::V1ProjectsProjectKeyImportExecutionJunitPostRequestTestsuiteInnerTestsuitesInner`. Please check the name to make sure it's valid. List of attributes: " + self.class.attribute_map.keys.inspect
         end
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'index')
-        self.index = attributes[:'index']
+      if attributes.key?(:'testcase')
+        if (value = attributes[:'testcase']).is_a?(Array)
+          self.testcase = value
+        end
       end
 
-      if attributes.key?(:'status')
-        self.status = attributes[:'status']
+      if attributes.key?(:'name')
+        self.name = attributes[:'name']
       end
 
-      if attributes.key?(:'actual_result')
-        self.actual_result = attributes[:'actual_result']
+      if attributes.key?(:'tests')
+        self.tests = attributes[:'tests']
       end
 
-      if attributes.key?(:'data')
-        self.data = attributes[:'data']
+      if attributes.key?(:'failure')
+        self.failure = attributes[:'failure']
       end
 
-      if attributes.key?(:'comment')
-        self.comment = attributes[:'comment']
+      if attributes.key?(:'timestamp')
+        self.timestamp = attributes[:'timestamp']
       end
 
-      if attributes.key?(:'description')
-        self.description = attributes[:'description']
+      if attributes.key?(:'skipped')
+        self.skipped = attributes[:'skipped']
       end
 
-      if attributes.key?(:'expected_result')
-        self.expected_result = attributes[:'expected_result']
+      if attributes.key?(:'failureevaluating')
+        self.failureevaluating = attributes[:'failureevaluating']
       end
     end
 
@@ -137,13 +134,13 @@ module TricentisTmApi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          index == o.index &&
-          status == o.status &&
-          actual_result == o.actual_result &&
-          data == o.data &&
-          comment == o.comment &&
-          description == o.description &&
-          expected_result == o.expected_result
+          testcase == o.testcase &&
+          name == o.name &&
+          tests == o.tests &&
+          failure == o.failure &&
+          timestamp == o.timestamp &&
+          skipped == o.skipped &&
+          failureevaluating == o.failureevaluating
     end
 
     # @see the `==` method
@@ -155,7 +152,7 @@ module TricentisTmApi
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [index, status, actual_result, data, comment, description, expected_result].hash
+      [testcase, name, tests, failure, timestamp, skipped, failureevaluating].hash
     end
 
     # Builds the object from hash

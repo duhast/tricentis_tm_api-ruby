@@ -4,6 +4,14 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **id** | **String** |  | [optional] |
+| **key** | **String** |  | [optional] |
+| **created** | **Time** |  | [optional] |
+| **updated** | **Time** |  | [optional] |
+| **created_by** | **String** |  | [optional] |
+| **updated_by** | **String** |  | [optional] |
+| **cycle** | [**V1ProjectsProjectKeyCyclesPost200ResponseInner**](V1ProjectsProjectKeyCyclesPost200ResponseInner.md) |  | [optional] |
+| **steps** | [**Array&lt;V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner&gt;**](V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner.md) |  | [optional] |
 | **test_case_key** | **String** |  |  |
 | **precondition** | **String** |  | [optional] |
 | **status** | **String** |  |  |
@@ -21,15 +29,7 @@
 | **labels** | **Array&lt;String&gt;** |  | [optional] |
 | **cycle_name** | **String** |  | [optional] |
 | **folder_path** | **String** |  | [optional] |
-| **steps** | [**Array&lt;V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner&gt;**](V1ProjectsProjectKeyTestRunsPost200ResponseInnerStepsInner.md) |  | [optional] |
 | **fields** | [**Array&lt;V1ProjectsProjectKeyCyclesPostRequestInnerFieldsInner&gt;**](V1ProjectsProjectKeyCyclesPostRequestInnerFieldsInner.md) |  | [optional] |
-| **id** | **String** |  | [optional] |
-| **key** | **String** |  | [optional] |
-| **created** | **Time** |  | [optional] |
-| **updated** | **Time** |  | [optional] |
-| **created_by** | **String** |  | [optional] |
-| **updated_by** | **String** |  | [optional] |
-| **cycle** | [**V1ProjectsProjectKeyCyclesPost200ResponseInner**](V1ProjectsProjectKeyCyclesPost200ResponseInner.md) |  | [optional] |
 
 ## Example
 
@@ -37,6 +37,14 @@
 require 'tricentis_tm_api'
 
 instance = TricentisTmApi::V1ProjectsProjectKeyTestRunsPost200ResponseInner.new(
+  id: null,
+  key: null,
+  created: null,
+  updated: null,
+  created_by: null,
+  updated_by: null,
+  cycle: null,
+  steps: null,
   test_case_key: null,
   precondition: null,
   status: null,
@@ -54,15 +62,7 @@ instance = TricentisTmApi::V1ProjectsProjectKeyTestRunsPost200ResponseInner.new(
   labels: null,
   cycle_name: null,
   folder_path: null,
-  steps: null,
-  fields: null,
-  id: null,
-  key: null,
-  created: null,
-  updated: null,
-  created_by: null,
-  updated_by: null,
-  cycle: null
+  fields: null
 )
 ```
 
